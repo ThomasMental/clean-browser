@@ -2,13 +2,12 @@
     "name": "Clean Browser",
     "description" : "Remove adv from videos",
     "version": "1.0",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "background": {
-        "scripts": ["scripts/background.js"],
-        "persistent": false
+        "service_worker": "scripts/background.js"
     },
     "permissions": ["declarativeContent", "storage"],
-    "browser_action": {
+    "action": {
         "default_title": "",
         "default_icon": {
             "16": "images/icon16.png",
