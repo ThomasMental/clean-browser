@@ -2,22 +2,26 @@
     "name": "Clean Browser",
     "description" : "Remove adv from videos",
     "version": "1.0",
-    "manifest_version": 3,
-    "icons": {
-        "16": "/images/icon16.png",
-        "32": "/images/icon32.png",
-        "64": "/images/icon64.png",
-        "128": "/images/icon128.png"
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["scripts/background.js"],
+        "persistent": false
     },
-    "action": {
+    "permissions": ["declarativeContent", "storage"],
+    "browser_action": {
         "default_title": "",
         "default_icon": {
-            "16": "/images/icon16.png",
-            "32": "/images/icon32.png",
-            "64": "/images/icon64.png",
-            "128": "/images/icon128.png"
+            "16": "images/icon16.png",
+            "32": "images/icon32.png",
+            "64": "images/icon64.png",
+            "128": "images/icon128.png"
         },
-        "default_popup": "/popup.html"
+        "default_popup": "popup.html"
     },
-    "permissions" :["storage"]
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "64": "images/icon64.png",
+        "128": "images/icon128.png"
+    }
 }
